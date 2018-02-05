@@ -1,0 +1,16 @@
+
+
+sample.o: ksamp.h sample.c
+	gcc -DDEBUG -c  sample.c
+
+samplenet.o: ksamp.h samplenet.c
+	gcc -DDEBUG -c  samplenet.c
+
+sampleprocess.o: ksamp.h sampleprocess.c
+	gcc -DDEBUG -c  sampleprocess.c
+
+samplesys.o: ksamp.h samplesys.c
+	gcc -DDEBUG -c  samplesys.c
+
+หksamp: ksamp.h main.c sample.o samplenet.o sampleprocess.o samplesys.o
+	gcc -DDEBUG -o ksamp  main.c sample.o samplenet.o sampleprocess.o samplesys.o

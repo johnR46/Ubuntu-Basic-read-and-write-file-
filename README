@@ -1,0 +1,9 @@
+#referenc
+*https://www.tutorialspoint.com/c_standard_library/time_h.htm // ctime
+*http://pubs.opengroup.org/onlinepubs/7908799/xsh/systime.h.html // gettimeday
+*http://www.learncpp.com/cpp-tutorial/19-header-files/  // linker
+*http://pubs.opengroup.org/onlinepubs/7908799/xsh/sleep.html // sleep 
+*https://www.tutorialspoint.com/cprogramming/c_header_files.htm // #if #endif
+*https://www.tutorialspoint.com/c_standard_library/string_h.htm // string.h
+*https://www.tutorialspoint.com/c_standard_library/stdlib_h.htm // stdlib.h // atoi 
+
