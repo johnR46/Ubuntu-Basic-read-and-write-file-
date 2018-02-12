@@ -61,8 +61,10 @@ int main(int argc, char *argv[]) {
 	sampleVersion();		// Kernel version
 	sampleUptime();			// Uptime
 	if(reportType == STANDARD) exit(0);
+	if(reportType == FULL) {
 	samplePartitions();
-	if(reportType == FULL) exit(0);
+	exit(0);
+	}
 	sampleStat();			// Kernel statistics
 	sampleMeminfo();		// Memory information
 	if(reportType == SHORT) exit(0);
