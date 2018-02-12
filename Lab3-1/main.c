@@ -1,5 +1,5 @@
 #include	<stdio.h>
-//#include	<stdlib.h>
+#include	<stdlib.h>
 #include	<string.h>
 #include	<sys/time.h>
 #include	<time.h>
@@ -10,6 +10,7 @@
 #define	STANDARD	0
 #define	SHORT	1
 #define	LONG	2
+#define FULL	3
 
 int main(int argc, char *argv[]) {
 
@@ -39,6 +40,10 @@ int main(int argc, char *argv[]) {
 			reportType = LONG;
 			strcpy(repTypeName, "Long");
 		}
+		if(c2 == 'p') {
+			reportType = FULL;
+			strcpy(repTypeName, "Full");
+		}
 	}
 
 // Get the current time
@@ -55,8 +60,9 @@ int main(int argc, char *argv[]) {
 	sampleCpuInfo();		// CPU information
 	sampleVersion();		// Kernel version
 	sampleUptime();			// Uptime
-	samplePartitions();
 	if(reportType == STANDARD) exit(0);
+	samplePartitions();
+	if(reportType == FULL) exit(0);
 	sampleStat();			// Kernel statistics
 	sampleMeminfo();		// Memory information
 	if(reportType == SHORT) exit(0);
