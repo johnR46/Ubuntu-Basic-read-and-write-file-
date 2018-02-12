@@ -45,8 +45,15 @@ void sampleInterrupts() {
 }
 
 
-void sampleIoports() {
-	printf("sampleIoports  --  Not implemented\n");
+void samplePartitions() {
+	char lineBuf[LB_SIZE];
+	FILE *thisProcFile;
+
+	thisProcFile = fopen("/proc/partitions", "r");
+	printf("All Partitions\n");
+	while(fgets(lineBuf, LB_SIZE+1, thisProcFile) != NULL) 
+		printf("  %s", lineBuf);
+	fclose(thisProcFile);
 }
 
 

@@ -1,0 +1,43 @@
+#code 
+main.c 
+
+
+
+
+start ->	 1. gettimeofday  (get time now) by function ctime is return value  ctime 	
+			#ref. ( ctime in #include<time.h>)	https://www.tutorialspoint.com/c_standard_library/time_h.htm 
+		   	print repTypeName time now 
+
+         	 2. get   Machine hostname  by  Opening Modes in Standard I/O  fopen("/proc/sys/kernel/hostname", "r")
+	    		#ref. https://www.programiz.com/c-programming/c-file-input-output
+			# cpe@cpe-Lenovo-Z40-75:/proc/sys/kernel$ cat hostname
+		 	
+	  	  
+		3. get cpuinformation by call function sampleCpuInfo();
+		 	#ref. sampleCpuInfo(); get string by  Opening Modes in Standard I/O   fopen("/proc/cpuinfo", "r");
+			# model cpu http://world.std.com/~swmcd/steven/tech/cpu.html 	
+			# cpe@cpe-Lenovo-Z40-75:/proc$ cat cpuinfo
+			
+		
+
+		4. get Kernel version by call function sampleVersion();
+		 	#ref. 	sampleVersion(); get string by  Opening Modes in Standard I/O  fopen("/proc/version", "r");
+			# cpe@cpe-Lenovo-Z40-75:/proc$ cat version
+			#
+		
+
+
+		5. get uptime  by call function  sampleUptime();
+		 	#ref. 	sampleUptime(); get string by  Opening Modes in Standard I/O  fopen("/proc/uptime", "r");
+			# cpe@cpe-Lenovo-Z40-75:/proc$ cat uptime
+
+		
+		6. get uptime  by call function   sampleStat();
+		 	#ref. 	sampleStat(); get string by  Opening Modes in Standard I/O  fopen("/proc/stat", "r");
+			# cpe@cpe-Lenovo-Z40-75:/proc$ cat uptime
+
+				
+
+			 
+		
+

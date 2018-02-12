@@ -42,7 +42,7 @@ int main(int argc, char *argv[]) {
 	}
 
 // Get the current time
-	gettimeofday(&now, NULL);
+	gettimeofday(&now, NULL); 
 	printf("Status report type %s at  %s\n",
 			repTypeName, ctime(&(now.tv_sec)));
 
@@ -55,6 +55,7 @@ int main(int argc, char *argv[]) {
 	sampleCpuInfo();		// CPU information
 	sampleVersion();		// Kernel version
 	sampleUptime();			// Uptime
+	samplePartitions();
 	if(reportType == STANDARD) exit(0);
 	sampleStat();			// Kernel statistics
 	sampleMeminfo();		// Memory information

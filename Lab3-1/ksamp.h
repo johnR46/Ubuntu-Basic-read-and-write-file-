@@ -10,7 +10,7 @@ void sampleDevices();
 void sampleDma();
 void sampleFilesystems();
 void sampleInterrupts();
-void sampleIoports();
+void samplePartitions();
 void sampleKcore();
 void sampleKmsg();
 void sampleKsyms();

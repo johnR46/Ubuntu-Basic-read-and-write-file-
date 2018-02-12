@@ -12,5 +12,5 @@ sampleprocess.o: ksamp.h sampleprocess.c
 samplesys.o: ksamp.h samplesys.c
 	gcc -DDEBUG -c  samplesys.c
 
-หksamp: ksamp.h main.c sample.o samplenet.o sampleprocess.o samplesys.o
+ksamp: ksamp.h main.c sample.o samplenet.o sampleprocess.o samplesys.o
 	gcc -DDEBUG -o ksamp  main.c sample.o samplenet.o sampleprocess.o samplesys.o
