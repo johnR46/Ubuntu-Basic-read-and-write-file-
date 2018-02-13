@@ -1,9 +1,9 @@
 #include	<stdio.h>
-#include	<stdlib.h>
-#include	<string.h>
-#include	<sys/time.h>
-#include	<time.h>
-#include	<unistd.h>
+#include	<stdlib.h> // 
+#include	<string.h> //
+#include	<sys/time.h> 
+#include	<time.h> // 
+#include	<unistd.h> //
 
 #include	"ksamp.h"
 
@@ -69,11 +69,11 @@ int main(int argc, char *argv[]) {
 	sampleMeminfo();		// Memory information
 	if(reportType == SHORT) exit(0);
 	sampleMounts();			// Mounted file systems
-	interval = atoi(argv[2]);
-	duration = atoi(argv[3]);
+	interval = atoi(argv[2]); // 2
+	duration = atoi(argv[3]); // 60
 	iteration = 0;
 	while(iteration<duration) {
-		sleep(interval);
+		sleep(interval);  // stop process (interval) sec
 		sampleLoadAvg();
 		iteration += interval;
 	}

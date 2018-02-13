@@ -4,10 +4,11 @@ main.c
 
 
 
-start ->	 1. gettimeofday  (get time now) by function ctime is return value  ctime 	
+start ->	 1. gettimeofday  (get time now)  is return value  now	
 			#ref. (ctime in #include<time.h>)https://www.tutorialspoint.com/c_standard_library/time_h.htm  
+			#ref. (gettimeofday in #include<sys/time.h> ) https://www.ibm.com/support/knowledgecenter/en/ssw_i5_54/apis/gettod.htm
 		   	print repTypeName time now 
-			// อธิบายการดึงเวลาในขณะนั้นมาจาก ฟังก์ชั่น gettimeofday
+			// อธิบายการดึงเวลาในขณะนั้นมาจาก ฟังก์ชั่น gettimeofday และส่งให้ function ctime แปลง int เป็น string 
 
          	 2. get   Machine hostname  by  Opening Modes in Standard I/O  fopen("/proc/sys/kernel/hostname", "r")
 	    		#ref. https://www.programiz.com/c-programming/c-file-input-output // อธิบายฟังก์ชันก์ fopen 
@@ -23,7 +24,16 @@ start ->	 1. gettimeofday  (get time now) by function ctime is return value  cti
 		4. #include <unistd.h>
 		#ref. http://pubs.opengroup.org/onlinepubs/7908799/xsh/sleep.html
 		
- 		( in main .c:68) 	sleep(interval); 	
+ 		( in main .c:68) 	sleep(interval); 
+		
+		5. proc/loadavg
+		
+		Example	:	 0.20 0.18 0.12 1/80 11206
+	
+		The first three columns measure CPU and IO utilization of the last one, five, and 10 minute periods. 
+		The fourth column shows the number of currently running processes and the total number of processes. 
+		The last column displays the last process ID used. 
+	
 
 
 
